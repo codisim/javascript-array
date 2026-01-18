@@ -12,3 +12,8 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 // console.log(arr);
+
+let arr2 = [1,2,3,4,5,6,7];
+arr2 = arr2.filter(item => item !== 3);
+
+// console.log(arr2);
