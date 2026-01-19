@@ -37,4 +37,21 @@ class TODO {
   next() {
     return this.todList[0];
   }
+
+  list() {
+    return this.todList;
+  }
+
+  find(term) {
+    const result = [];
+    for (let i = 0; i < this.todList.length; i++) {
+      if (this.todList[i].toLowerCase().text.includes(term)) {
+        result.push(this.todList[i]);
+      }
+    }
+    return result;
+  }
 }
+
+
+
