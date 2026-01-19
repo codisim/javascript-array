@@ -18,4 +18,31 @@ class Queue {
         return true;
     }
 
+
+    dequeue(){
+        if (this.rear === MAX_SIZE) {
+            console.log("Queue is empty");
+            return false;
+        }
+
+        const item = this.queue[this.front];
+        for (let i = this.front; i < this.rear - 1; i++) {
+            this.queue[i] = this.queue[i + 1];
+        }
+        delete this.queue[--this.rear]
+        return;   
+    }
+
+
+    showqueue(){
+        if (this.front === this.rear) {
+            console.log("Queue is empty");
+            return false;
+        }
+        for (let i = this.front; i < this.rear; i++) {
+            console.log(this.queue[i]);
+        }
+    }
+
+
 }
