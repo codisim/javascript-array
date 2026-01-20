@@ -1,5 +1,4 @@
-
-export const votes = [
+const votes = [
     'java',
     'python',
     'java',
@@ -18,7 +17,21 @@ export const votes = [
 ]
 
 
-const result = votes.reduce((acc, curr) => {
+
+function myReduce(arr, cb, init){
+    let acc = init, start = 0;
+    if (!init) {
+     acc = arr[0];
+     start = 1;   
+    }
+    for (let i = start; i < arr.length; i++) {
+        acc = cb(acc, arr[i], i, arr);
+    }
+    return acc;
+}
+
+
+const result = myReduce(votes,(acc, curr) => {
     if (acc[curr]) {
         acc[curr]++;
     } else {
@@ -29,3 +42,4 @@ const result = votes.reduce((acc, curr) => {
 }, {})
 
 console.log(result);
+
