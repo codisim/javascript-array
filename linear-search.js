@@ -14,4 +14,14 @@ const LinearSearch = (arr, key) => {
 }
 
 const s1 = LinearSearch(numbers, 90);
-console.log(s1);
+// console.log(s1);
+
+
+const LinearSearchCB = (arr, cb) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (cb(arr[i])) {
+            return i;
+        }
+    }
+    return - 1;
+}
