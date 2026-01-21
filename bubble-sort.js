@@ -31,4 +31,21 @@ const bubbleSortDsc = (arr) => {
 
 bubbleSortDsc(myArr);
 
+// console.log(myArr);
+
+// custom bubble sort
+const bubbleSortDsc2 = (arr,cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+        if (cb(arr[j] < arr[j+1]) > 0) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+  }
+};
+
+bubbleSortDsc2(myArr, (a, b) => a - b);
 console.log(myArr);
+
