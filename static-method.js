@@ -22,4 +22,8 @@ console.log(Array.from(mapper.keys()));
 
 
 
-// console.log(s2);
+//  Array.isArray()
+Array.isArray([]);
+Array.isArray([1]);
+Array.isArray(new Array('a', 'b', 'c'));
+Array.isArray(Array.prototype) // Array.prototype itself is an arr
