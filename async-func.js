@@ -23,3 +23,15 @@ function callUserFromComment(username) {
     
 
 callUserFromComment("john_doe");
+
+
+
+// with promise
+
+  function getName(){
+
+  }
+
+  async function getNameAsync(){
+    
+  }
